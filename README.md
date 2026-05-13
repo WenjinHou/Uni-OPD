@@ -76,14 +76,14 @@ To address them, Uni-OPD introduces a **dual-perspective optimization recipe** t
     </p>
 </table>
 
-- **Student-perspective: offline difficulty-aware data balancing.** We selectively upsample medium-difficulty prompts to reshape the training corpus into a more balanced difficulty distribution while preserving data diversity. This enables the student to generate more informative trajectories and explore a broader solution space.
+- **Student-perspective 1: offline difficulty-aware data balancing.** We selectively upsample medium-difficulty prompts to reshape the training corpus into a more balanced difficulty distribution while preserving data diversity. This enables the student to generate more informative trajectories and explore a broader solution space.
 <table align="center">
     <p align="center">
       <img src="/docs/figures/offline_data_balancing.png" width="80%" />
     </p>
 </table>
 
-- **Student-perspective: online correctness-aware data balancing.** During training, we dynamically filter and reshape rollout batches to maintain a balanced ratio between correct and incorrect trajectories, preventing the student from collapsing onto trivially correct samples or being overwhelmed by uniformly failed ones.
+- **Student-perspective 2: online correctness-aware data balancing.** During training, we dynamically filter and reshape rollout batches to maintain a balanced ratio between correct and incorrect trajectories, preventing the student from collapsing onto trivially correct samples or being overwhelmed by uniformly failed ones.
 <table align="center">
     <p align="center">
       <img src="/docs/figures/online_data_balancing.png" width="60%" />
