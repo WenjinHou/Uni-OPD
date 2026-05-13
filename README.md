@@ -76,7 +76,7 @@ To address them, Uni-OPD introduces a **dual-perspective optimization recipe** t
     </p>
 </table>
 
-- **Student-perspective: offline difficulty-aware data balancing.** We re-balance the training corpus so that the student is exposed to prompts of appropriate difficulty, encouraging exploration of informative self-generated states rather than wasting compute on trivially easy or unsolvable prompts.
+- **Student-perspective: offline difficulty-aware data balancing.** We selectively upsample medium-difficulty prompts to reshape the training corpus into a more balanced difficulty distribution while preserving data diversity. This enables the student to generate more informative trajectories and explore a broader solution space.
 <table align="center">
     <p align="center">
       <img src="/docs/figures/offline_data_balancing.png" width="80%" />
