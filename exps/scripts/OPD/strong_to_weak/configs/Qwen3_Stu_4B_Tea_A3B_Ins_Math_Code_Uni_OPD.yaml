@@ -1,0 +1,5 @@
+data:
+  - path: <YOUR PATH TO G-OPD-Training-Data/DeepMath-103K/offline_data_balanced.jsonl>
+    teacher: math-a3b
+  - path: <YOUR PATH TO G-OPD-Training-Data/Eurus/offline_data_balanced.jsonl>
+    teacher: code-a3b
