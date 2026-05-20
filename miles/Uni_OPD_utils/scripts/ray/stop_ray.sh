@@ -32,6 +32,8 @@ fi
 # perform silent remote stop/kill (suppress long output)
 echo "停止 Ray 服务..."
 pssh -t 0 -h "${PSSH_HOSTS_FILE}" "ray stop --force" || true
+echo "清理残留 Ray 进程..."
+pssh -t 0 -h "${PSSH_HOSTS_FILE}" "pkill -9 -f 'gcs_server' 2>/dev/null; pkill -9 -f 'raylet' 2>/dev/null; pkill -9 -f 'ray::' 2>/dev/null; true" || true
 echo "停止 Triton 服务..."
 pssh -P -t 0 -h "${PSSH_HOSTS_FILE}" "killall tritonserver" || true
 echo "停止 Python 进程..."

@@ -98,12 +98,14 @@
     </p>
 </table>
 
+<!--
 - **更稳定的训练动态与更强的实证表现**。该双视角方案带来更平滑的训练曲线，以及在数学、代码、图表与通用多模态推理等基准上相对强 OPD/RL 基线的稳定提升。完整结果请参阅论文。
 <table align="center">
     <p align="center">
       <img src="/docs/figures/train_dynamics.png" width="80%" />
     </p>
 </table>
+-->
 
 ## 📚 数据集
 

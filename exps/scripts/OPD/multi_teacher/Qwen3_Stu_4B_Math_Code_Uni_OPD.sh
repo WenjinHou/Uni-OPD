@@ -181,9 +181,7 @@ STUDENT_MODEL_ARGS_FILE=$(echo "${STUDENT_MODEL_NAME}" |
     sed 's/-Instruct//g; s/-Thinking//g; s/Qwen3-VL-/qwen3-/g; s/Qwen3-/qwen3-/g; s/-2B/-1.7B/g')
 STUDENT_MODEL_ARGS_PATH="scripts/models/${STUDENT_MODEL_ARGS_FILE}.sh"
 
-#! OPD 不支持 EVAL
-EVAL_DATA_FILE=""
-
+TRAIN_SCRIPT="${MILES_PATH}/train.py"
 LAUNCHER_SCRIPT="${MILES_PATH}/Uni_OPD_utils/ray_launcher.py"
 STOP_RAY_SCRIPT="${MILES_PATH}/Uni_OPD_utils/scripts/ray/stop_ray.sh"
 STOP_SGLANG_SCRIPT="${MILES_PATH}/Uni_OPD_utils/scripts/server/stop_server.sh"
@@ -489,7 +487,7 @@ echo "  ROLLOUT_NUM_GPUS        : ${ROLLOUT_NUM_GPUS}"
 echo "================================================================"
 
 TRAIN_LOG_FILE="${LOG_DIR}/train_${CUR_TIME}.log"
-python "${LAUNCHER_SCRIPT}" train.py \
+python "${LAUNCHER_SCRIPT}" "${TRAIN_SCRIPT}" \
     --actor-num-nodes "${ACTOR_NUM_NODES}" \
     --actor-num-gpus-per-node "${ACTOR_NUM_GPUS_PER_NODE}" \
     --rollout-num-gpus "${ROLLOUT_NUM_GPUS}" \

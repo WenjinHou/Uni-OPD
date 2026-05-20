@@ -24,12 +24,16 @@ ARG2="$2"
 CONDA_INIT_CMD=""
 if [ -f "${CONDA_PATH}/bin/activate" ]; then
     source "${CONDA_PATH}/bin/activate"
-    conda activate "${CONDA_ENV_NAME}" &&
-        echo "Conda env '${CONDA_ENV_NAME}' activated on head node." ||
-        echo "Warning: failed to activate conda env '${CONDA_ENV_NAME}'"
+    if conda activate "${CONDA_ENV_NAME}"; then
+        echo "Conda env '${CONDA_ENV_NAME}' activated on head node."
+    else
+        echo "Error: failed to activate conda env '${CONDA_ENV_NAME}'"
+        exit 1
+    fi
     CONDA_INIT_CMD="source ${CONDA_PATH}/bin/activate && conda activate ${CONDA_ENV_NAME};"
 else
-    echo "Warning: conda not found at ${CONDA_PATH}, skipping activation"
+    echo "Error: conda not found at ${CONDA_PATH}"
+    exit 1
 fi
 
 # PSSH_SLAVE_HOSTS_FILE：仅包含 slave 节点，不修改完整的 pssh.hosts

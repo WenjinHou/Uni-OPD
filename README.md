@@ -97,12 +97,14 @@ To address them, Uni-OPD introduces a **dual-perspective optimization recipe** t
     </p>
 </table>
 
+<!--
 - **Stable training dynamics and strong empirical results.** The dual-perspective recipe yields smoother training curves and consistent gains over strong OPD/RL baselines across math, code, chart, and general multimodal reasoning benchmarks. See the paper for the full set of results.
 <table align="center">
     <p align="center">
       <img src="/docs/figures/train_dynamics.png" width="80%" />
     </p>
 </table>
+-->
 
 ## 📚 Dataset
 
