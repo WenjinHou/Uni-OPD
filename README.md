@@ -189,8 +189,8 @@ If you find our paper / code helpful, please consider citing our work 📝 and s
 
 ```bibtex
 @article{hou2026uni,
-  title   = {Uni-OPD: Unifying On-Policy Distillation with a Dual-Perspective Recipe},
-  author  = {Hou, Wenjin and Peng, Shangpin and Wang, Weinong and Ruan, Zheng and Zhang, Yue and Zhou, Zhenglin and Gao, Mingqi and Chen, Yifei and Wang, Kaiqi and Yang, Hongming and others},
+  title   = {{Uni-OPD}: Unifying On-Policy Distillation with a Dual-Perspective Recipe},
+  author  = {Hou, Wenjin and Peng, Shangpin and Wang, Weinong and Ruan, Zheng and Zhang, Yue and Zhou, Zhenglin and Gao, Mingqi and Chen, Yifei and Wang, Kaiqi and Yang, Hongming and Zhang, Chengquan and Tian, Zhuotao and Hu, Han and Yang, Yi and Wu, Fei and Fan, Hehe},
   journal = {arXiv preprint arXiv:2605.03677},
   year    = {2026}
 }
